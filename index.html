@@ -2,96 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Abroadly - Learn. Lead. Rise.</title>
+<title>Abroadly</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#3D1934;font-family:sans-serif;overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:rgba(61,25,52,.97)}
-.logo{height:52px;background:#fff;padding:3px 8px;border-radius:6px}
-.tab{background:#F3E9CC;color:#3D1934;padding:6px 14px;margin-left:8px;font-family:'DM Serif Display',serif;text-decoration:none;font-size:14px;box-shadow:2px 2px 0 #000;transform:rotate(-1deg);display:inline-block}
-section{min-height:100vh;padding-top:80px}
-#home{display:flex;align-items:center;padding:110px 4% 60px;background:#3D1934;color:#FFF8E7;position:relative}
-.h-left{flex:1;z-index:2}.h-left h1{font-family:'DM Serif Display',serif;font-size:78px;line-height:.9;color:#FFF6DC}
-.h-left p{font-family:'Caveat',cursive;font-size:26px;margin-top:14px;line-height:1.2}
-.glitter{position:absolute;inset:0;pointer-events:none}.glitter i{position:absolute;font-style:normal;font-size:18px;animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
-.h-right{flex:1;display:flex;justify-content:center;height:580px}
-.paper{width:440px;height:560px;background:#EDE6D1;position:relative;transform:rotate(-1.5deg);box-shadow:8px 10px 0 rgba(0,0,0,.3);padding:22px}
-.person{position:absolute;width:80px;height:86px;background:#FF8FB0;border-radius:40% 40% 8px 8px;border:3px solid #fff}
-.person:after{content:'';position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:34px;background:#FFC2D1;border-radius:50%;border:2px solid #fff}
-.light{background:#FFC0D0}.mid{background:#FFAAC0}.dark{background:#FF8FB0}
-.bow{position:absolute;font-size:48px;z-index:5}
-.washi{position:absolute;height:28px;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:2px;background:#FFC2CE;box-shadow:0 1px 2px rgba(0,0,0,.2)}
-#about img,#team img{width:100%;display:block}
-#projects{background:#FFF8E7;text-align:center;padding:90px 5%}
-#projects h2{font-family:'DM Serif Display',serif;font-size:38px}
-.p-grid{max-width:900px;margin:30px auto;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.p-note{background:#E5C4A0;padding:18px;box-shadow:4px 5px 0 rgba(61,25,52,.15);transform:rotate(-0.8deg);text-align:left}
+body{background:#3D1934;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(61,25,52,.85);backdrop-filter:blur(4px)}
+.logo{height:44px;background:#fff;padding:3px 7px;border-radius:6px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{background:#F3E9CC;color:#3D1934;padding:5px 12px;font-family:'DM Serif Display',serif;text-decoration:none;font-size:13px;box-shadow:2px 2px 0 #000;transform:rotate(-1deg)}
+/* HOME - EXACT IMAGE + ANIMATION */
+#home{position:relative;width:100%;height:100vh;min-height:100vh;padding:0;overflow:hidden;background:#2f1229;display:flex;align-items:center;justify-content:center}
+#home img.bg{width:100%;height:100%;object-fit:cover;object-position:center;display:block;animation:zoomIn 1.2s ease-out}
+@keyframes zoomIn{from{transform:scale(1.08);opacity:0}to{transform:scale(1);opacity:1}}
+.glitter{position:absolute;inset:0;pointer-events:none;z-index:2}
+.glitter i{position:absolute;font-style:normal;animation:twinkle 2s infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+.bow-float{position:absolute;z-index:3;animation:float 3s infinite ease-in-out}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(2deg)}}
+/* ABOUT TEAM PROJECTS JOIN */
+#about,#team{width:100%;display:flex;justify-content:center;align-items:center;padding:70px 0 0 0;background:#C9A0E0}
+#team{background:#FFD6DE}
+#about img,#team img{width:100%;max-width:1100px;height:auto;display:block}
+#projects{background:#FFF8E7;text-align:center;padding:80px 5%}
+#projects h2{font-family:'DM Serif Display',serif;font-size:36px}
+.p-grid{max-width:900px;margin:28px auto;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.p-note{background:#E5C4A0;padding:16px;box-shadow:4px 5px 0 rgba(61,25,52,.15);transform:rotate(-0.8deg);text-align:left}
 .p-note:nth-child(even){transform:rotate(0.8deg);background:#E8D5B5}
 #join{display:flex;min-height:70vh}
-.join-left{flex:0 0 38%;background:#E8E8E8;padding:60px 32px}
-.join-right{flex:1;background:#FFF8E7;padding:50px 32px}
-.join-left h2{font-family:'DM Serif Display',serif;font-size:44px}
-.btn{background:#FDE047;border:1.5px solid #3d1934;padding:10px 22px;box-shadow:3px 3px 0 #3d1934;font-weight:700;cursor:pointer}
-@media(max-width:900px){#home{flex-direction:column}.h-left h1{font-size:50px}.paper{width:92vw;max-width:380px}.p-grid{grid-template-columns:1fr}#join{flex-direction:column}}
+.join-left{flex:0 0 38%;background:#E8E8E8;padding:50px 28px}
+.join-right{flex:1;background:#FFF8E7;padding:40px 28px}
+.join-left h2{font-family:'DM Serif Display',serif;font-size:40px}
+.btn{background:#FDE047;border:1.5px solid #3d1934;padding:10px 20px;box-shadow:3px 3px 0 #3d1934;font-weight:700;cursor:pointer}
+@media(max-width:900px){
+#home{height:100svh}
+#home img.bg{object-fit:cover;object-position:70% center}
+.p-grid{grid-template-columns:1fr}
+#join{flex-direction:column}
+}
 </style>
 </head>
 <body>
-<nav>
-<img src="logo.jpeg" class="logo">
-<div>
-<a class="tab" href="#home">Home</a>
-<a class="tab" href="#about">About</a>
-<a class="tab" href="#team">Team</a>
-<a class="tab" href="#projects">Projects</a>
-<a class="tab" href="#join">Join</a>
-</div>
-</nav>
+<nav><img src="logo.jpeg" class="logo"><div class="tabs"><a class="tab" href="#home">Home</a><a class="tab" href="#about">About</a><a class="tab" href="#team">Team</a><a class="tab" href="#projects">Projects</a><a class="tab" href="#join">Join</a></div></nav>
 
 <section id="home">
-<div class="glitter"><i style="top:12%;left:22%">✨</i><i style="top:28%;left:8%">⭐</i><i style="top:18%;left:78%">✨</i><i style="top:65%;left:4%">🌟</i><i style="top:78%;left:32%">✨</i><i style="top:22%;left:44%">✨</i></div>
-<div class="h-left"><h1>Welcome to<br>ABROADLY!</h1><p>Stay connected with people all around<br>the world looking for opportunities :)</p></div>
-<div class="h-right"><div class="paper">
-<div class="person light" style="top:20px;left:50%;transform:translateX(-50%);width:96px;height:96px"></div>
-<div class="person mid" style="top:132px;left:24px"></div><div class="person dark" style="top:132px;left:122px"></div><div class="person mid" style="top:132px;left:220px"></div><div class="person light" style="top:132px;left:318px"></div>
-<div class="person dark" style="top:244px;left:14px"></div><div class="person mid" style="top:238px;left:118px;width:108px;height:98px"></div><div class="person dark" style="top:244px;left:262px"></div>
-<div class="person light" style="top:362px;left:52px;width:90px"></div><div class="person dark" style="top:362px;left:168px"></div>
-<div class="person mid" style="top:448px;left:12px"></div><div class="person light" style="top:448px;left:110px"></div><div class="person light" style="top:448px;left:208px"></div><div class="person mid" style="top:448px;left:306px"></div>
-<div class="bow" style="top:-32px;left:-32px">🎀</div><div class="bow" style="top:54px;right:-28px">🎀</div><div class="bow" style="bottom:-28px;left:-26px">🎀</div><div class="bow" style="bottom:-32px;right:-32px">🎀</div>
-<div class="washi" style="top:72px;right:-52px;width:158px;transform:rotate(3deg)">● ● ● ● ● ●</div><div class="washi" style="bottom:64px;left:-40px;width:166px;transform:rotate(2deg)">● ● ● ● ● ●</div>
-</div></div>
-</section>
-
-<section id="about"><img src="about.png" alt="About us"></section>
-
-<section id="team"><img src="team.png" alt="Meet our core team"></section>
-
-<section id="projects">
-<h2>Our Projects and Initiatives</h2>
-<div class="p-grid">
-<div class="p-note"><h4>Abroadly Exclusive 1:1 Mentorship</h4><p>Personalised 30 min sessions where students get guidance on passion projects, research, extracurriculars.</p></div>
-<div class="p-note"><h4>Abroadly Journal</h4><p>Students stories, application guides, scholarship resources, research advice, interviews.</p></div>
-<div class="p-note"><h4>Abroadly Project Lab</h4><p>Turn ideas into meaningful projects with guidance, collaborations, and showcase opportunities.</p></div>
-<div class="p-note"><h4>Abroadly Community</h4><p>A growing network where students discover opportunities, share ideas, collaborate, and learn together.</p></div>
+<img class="bg" src="home.png" alt="Welcome to Abroadly">
+<div class="glitter">
+<i style="top:20%;left:18%;font-size:18px">✨</i>
+<i style="top:30%;left:55%;font-size:14px">⭐</i>
+<i style="top:15%;left:75%;font-size:16px">✨</i>
+<i style="top:70%;left:8%;font-size:16px">🌟</i>
+<i style="top:82%;left:32%;font-size:14px">✨</i>
+<i style="top:78%;left:88%;font-size:18px">✨</i>
 </div>
 </section>
 
-<section id="join">
-<div class="join-left"><h2>JOIN US</h2><div style="font-size:36px;margin:10px 0">🎀</div><p>Join our community and connect with thousands of people!</p><br><p><b>Contact us on:</b> ✉️</p><p>headcommunitymanager.theabroadly@gmail.com</p></div>
-<div class="join-right">
-<h3 style="font-family:'Caveat',cursive;font-size:26px;margin-bottom:16px">A little Information about you!</h3>
+<section id="about"><img src="about.png" alt="About"></section>
+<section id="team"><img src="team.png" alt="Team"></section>
+
+<section id="projects"><h2>Our Projects and Initiatives</h2>
+<div class="p-grid">
+<div class="p-note"><h4>Abroadly Exclusive 1:1 Mentorship</h4><p>Personalised 30 min sessions for passion projects, research, ECs.</p></div>
+<div class="p-note"><h4>Abroadly Journal</h4><p>Student stories, guides, scholarships, research advice.</p></div>
+<div class="p-note"><h4>Abroadly Project Lab</h4><p>Turn ideas into meaningful projects with guidance.</p></div>
+<div class="p-note"><h4>Abroadly Community</h4><p>Discover opportunities, share ideas, collaborate.</p></div>
+</div>
+</section>
+
+<section id="join"><div class="join-left"><h2>JOIN US</h2><div style="font-size:32px;margin:8px 0">🎀</div><p>Join our community!</p><br><p><b>Contact:</b> ✉️<br>headcommunitymanager.theabroadly@gmail.com</p></div>
+<div class="join-right"><h3 style="font-family:'Caveat',cursive;font-size:24px;margin-bottom:14px">A little Information about you!</h3>
 <form action="https://formsubmit.co/headcommunitymanager.theabroadly@gmail.com" method="POST">
 <input name="name" placeholder="Your name" style="width:100%;padding:10px;margin-bottom:10px;border:1.5px solid #3d1934" required>
-<textarea name="interest" placeholder="Your Extracurricular (Interests)" style="width:100%;padding:10px;margin-bottom:10px;border:1.5px solid #3d1934" required></textarea>
-<input name="education" placeholder="Your current level of education" style="width:100%;padding:10px;margin-bottom:10px;border:1.5px solid #3d1934" required>
+<textarea name="interest" placeholder="Your Interests" style="width:100%;padding:10px;margin-bottom:10px;border:1.5px solid #3d1934"></textarea>
 <input type="email" name="email" placeholder="Your email" style="width:100%;padding:10px;margin-bottom:10px;border:1.5px solid #3d1934" required>
-<textarea name="field" placeholder="Your Interested Field and choice of university" style="width:100%;padding:10px;margin-bottom:12px;border:1.5px solid #3d1934" required></textarea>
-<input type="hidden" name="_captcha" value="false">
 <button class="btn">Join Now!</button>
-</form>
-</div>
-</section>
+</form></div></section>
 </body>
 </html>
