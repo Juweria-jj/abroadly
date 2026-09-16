@@ -2,89 +2,111 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Abroadly</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Caveat:wght@500&family=Patrick+Hand&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>Abroadly - Learn. Lead. Rise.</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Caveat:wght@600&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:#3B1636;overflow-x:hidden;font-family:'Inter',sans-serif}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:rgba(59,22,54,.92);backdrop-filter:blur(6px)}
-.logo{font-family:'Great Vibes',cursive;color:#FFB5D5;font-size:42px}
-.logo span{font-family:'Patrick Hand',cursive;font-size:9px;display:block;color:#FFB5D5;letter-spacing:1.5px;margin-left:18px;margin-top:-3px}
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{background:#F2E8CF;color:#3B1636;padding:6px 14px;font-family:'Patrick Hand',cursive;font-size:16px;text-decoration:none;box-shadow:2px 3px 0 rgba(0,0,0,.3);transform:rotate(-1deg)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(59,22,54,.94);backdrop-filter:blur(6px)}
+.logo{font-family:'Great Vibes',cursive;color:#FFB5D5;font-size:40px;line-height:1}
+.logo span{font-family:'Patrick Hand',cursive;font-size:8px;display:block;color:#FFB5D5;letter-spacing:1.5px;margin-left:16px;margin-top:-2px}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.tab{background:#F2E8CF;color:#3B1636;padding:5px 12px;font-family:'Patrick Hand',cursive;font-size:15px;text-decoration:none;box-shadow:2px 3px 0 #000;transform:rotate(-1deg)}
 
-#home{min-height:100vh;background:#3B1636;display:flex;align-items:center;padding:110px 6% 60px}
-.h-left{flex:1}.h-left h1{font-family:'DM Serif Display',serif;color:#FFF2D1;font-size:88px;line-height:.88}
-.h-left h1 b{display:block;font-size:98px}.h-left p{font-family:'Caveat',cursive;color:#FFF2D1;font-size:28px;margin-top:18px}
+/* HOME - CODED SHARP */
+#home{min-height:100vh;background:#3B1636;display:flex;align-items:center;padding:110px 6% 50px;position:relative}
+.h-left{flex:1;z-index:2}
+.h-left h1{font-family:'DM Serif Display',serif;color:#FFF2D1;font-size:88px;line-height:.9;font-weight:400}
+.h-left h1 b{display:block;font-size:98px;margin-top:4px}
+.h-left p{font-family:'Caveat',cursive;color:#FFF2D1;font-size:28px;margin-top:18px;line-height:1.2}
 .h-right{flex:1;display:flex;justify-content:center}
-.scrap{position:relative;width:500px;height:640px}.base{position:absolute;top:50px;left:40px;width:410px;height:530px;background:#F0E6CE;transform:rotate(-2deg);box-shadow:6px 8px 0 rgba(0,0,0,.25)}
+.scrap{position:relative;width:500px;height:640px}
+.base{position:absolute;top:50px;left:40px;width:410px;height:530px;background:#F0E6CE;transform:rotate(-2deg);box-shadow:6px 8px 0 rgba(0,0,0,.25)}
 .person{position:absolute;width:86px;height:90px;background:#FFA8C0;border:4px solid #FFFEF5;border-radius:50% 50% 12px 12px;animation:pop .6s backwards}
 .person::before{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:42px;height:42px;background:#FFCBD8;border-radius:50%;border:3px solid #FFFEF5}
 .light{background:#FFC2D0}.mid{background:#FF9EB8}.dark{background:#FF8AA5}
 .bow{position:absolute;font-size:54px;animation:float 3s infinite ease-in-out;z-index:5}
-@keyframes pop{0%{transform:scale(0) translateY(30px)}100%{transform:scale(1) translateY(0)}}
+@keyframes pop{0%{transform:scale(0) translateY(30px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
-/* ABOUT */
-#about{background:#C9A6E8;padding:90px 6% 40px;min-height:80vh;display:flex;flex-direction:column;justify-content:center}
-.about-top{display:flex;gap:40px;align-items:center;max-width:1200px;margin:0 auto;width:100%}
-.about-text{flex:1}.about-text h2{font-family:'DM Serif Display',serif;font-size:40px;text-align:center;margin-bottom:18px}
-.about-text p{font-size:17px;line-height:1.5;max-width:420px}.about-line{width:100%;height:3px;background:#000;margin:16px 0;max-width:420px}
-.about-img{flex:1;display:flex;justify-content:center;font-size:70px}
-.about-bottom{max-width:1200px;margin:50px auto 0;width:100%;text-align:center}
-.about-bottom h2{font-family:'DM Serif Display',serif;font-size:40px;margin-bottom:16px}
+/* ABOUT - CODED SHARP */
+#about{background:#C9A6E8;padding:90px 6% 50px;min-height:90vh;display:flex;flex-direction:column;justify-content:center}
+.about-top{max-width:1150px;margin:0 auto;width:100%;display:flex;gap:30px;align-items:center}
+.about-text{flex:1}
+.about-text h2{font-family:'DM Serif Display',serif;font-size:42px;text-align:center;margin-bottom:18px}
+.about-text p{font-size:17px;line-height:1.5;max-width:420px;margin:0 auto}
+.about-line{width:100%;height:3px;background:#000;margin:16px auto;max-width:420px}
+.about-art{flex:1;text-align:center;font-size:80px}
+.about-bottom{max-width:1150px;margin:60px auto 0;text-align:center}
+.about-bottom h2{font-family:'DM Serif Display',serif;font-size:42px;margin-bottom:14px}
 .about-bottom p{font-size:18px;max-width:700px;margin:0 auto;line-height:1.5}
 
-/* TEAM */
-#team{background:#FFD8E2;padding:90px 3% 40px;min-height:80vh}
-.team-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:14px}
-.team-intro{grid-row:span 2;background:#FFF5E0;padding:24px 18px;display:flex;flex-direction:column;justify-content:center;border:3px solid #000}
+/* TEAM - CODED SHARP */
+#team{background:#FFD8E2;padding:90px 3% 50px;min-height:90vh}
+.team-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:14px}
+.team-intro{grid-row:span 2;background:#FFF5E0;padding:24px 18px;border:3px solid #000;display:flex;flex-direction:column;justify-content:center}
 .team-intro h2{font-family:'DM Serif Display',serif;font-size:34px;line-height:.95}
-.team-icon{font-size:68px;margin-top:18px;text-align:center}
-.card{padding:14px;border:3px solid #000;min-height:160px;animation:pop .5s backwards}
-.card h3{font-family:'Patrick Hand',cursive;font-size:17px}.card h4{font-family:'DM Serif Display',serif;font-size:14px;margin:4px 0 8px}.card p{font-size:12.5px;line-height:1.35}
+.card{padding:14px;border:3px solid #000;min-height:165px;animation:pop .5s backwards}
+.card h3{font-family:'Patrick Hand',cursive;font-size:17px}.card h4{font-family:'DM Serif Display',serif;font-size:14px;margin:4px 0 8px}.card p{font-size:12px;line-height:1.35}
 .cream{background:#FFF8DC}.blue{background:#CBE7E8}
 
-/* IMPACT - NEW CODED SHARP */
-#impact{background:#6D3A42;padding:80px 5%;min-height:80vh;display:flex;align-items:center}
-.impact-wrap{max-width:1100px;margin:0 auto;width:100%;display:flex;gap:50px;align-items:flex-start}
-.impact-title{flex:0 0 220px;position:relative}
-.impact-title h2{font-family:'DM Serif Display',serif;font-size:48px;color:#000;line-height:.9}
-.impact-title h2 span{display:block}
-.impact-title::before{content:'💌';font-size:52px;position:absolute;top:-50px;left:110px;transform:rotate(8deg)}
-.impact-title::after{content:'⁓ ⁓';font-family:'Great Vibes',cursive;font-size:28px;position:absolute;top:98px;left:20px;opacity:.7}
-.impact-cards{flex:1;display:flex;gap:28px;justify-content:center}
-.i-card{background:#FFFEF0;width:260px;min-height:220px;padding:20px 18px;border:3px solid #000;box-shadow:5px 6px 0 rgba(0,0,0,.2);transform:rotate(-0.6deg);animation:pop .6s backwards}
-.i-card:nth-child(2){transform:rotate(0.6deg);animation-delay:.2s}
-.i-card h3{font-family:'DM Serif Display',serif;font-size:20px;text-align:center;letter-spacing:1px;margin-bottom:22px}
-.i-card p{font-size:14px;line-height:1.4;margin-top:16px}
+/* IMPACT - CODED EXACT LIKE YOUR PHOTO - NO IMAGE NEEDED */
+#impact{background:#6B3A44;padding:80px 5%;min-height:85vh;display:flex;align-items:center}
+.impact-wrap{max-width:1150px;margin:0 auto;width:100%;display:flex;gap:60px;align-items:flex-start}
+.impact-title{flex:0 0 240px;position:relative}
+.impact-title h2{font-family:'DM Serif Display',serif;font-size:54px;color:#000;line-height:.9}
+.impact-title::before{content:'💌';font-size:62px;position:absolute;top:-58px;left:130px;transform:rotate(8deg)}
+.impact-title::after{content:'~ ~';font-family:'Great Vibes',cursive;font-size:28px;position:absolute;top:105px;left:10px}
+.impact-cards{flex:1;display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+.i-card{background:#FFFEF0;width:270px;min-height:280px;padding:22px 18px;border:1.5px solid #000;box-shadow:5px 6px 0 rgba(0,0,0,.18)}
+.i-card h3{font-family:'DM Serif Display',serif;font-size:22px;text-align:center;letter-spacing:1px;margin-bottom:30px}
+.i-card p{font-size:15px;line-height:1.4;margin-top:14px}
 
-#projects{background:#FFF8E7;text-align:center;padding:80px 5%}
-#projects h2{font-family:'DM Serif Display',serif;font-size:36px}
-.p-grid{max-width:900px;margin:28px auto;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.p-note{background:#E5C4A0;padding:16px;box-shadow:4px 5px 0 rgba(61,25,52,.15);text-align:left;border:1.5px solid #000}
-#join{display:flex;min-height:70vh}
-.join-left{flex:0 0 36%;background:#E8E8E8;padding:50px 28px}.join-right{flex:1;background:#FFF8E7;padding:40px 28px}
-.btn{background:#FDE047;border:2px solid #000;padding:10px 20px;box-shadow:3px 3px 0 #000;font-weight:700;cursor:pointer}
+/* PROJECTS - CODED EXACT LIKE YOUR PHOTO - NO IMAGE NEEDED */
+#projects{background:#FFFEF3;padding:90px 4% 60px;min-height:100vh}
+#projects h2{font-family:'DM Serif Display',serif;font-size:46px;text-align:center;margin-bottom:40px;color:#000}
+.project-board{max-width:1100px;margin:0 auto;position:relative;height:560px}
+.sticky{position:absolute;width:240px;background:#E6C9A0;background-image:linear-gradient(0deg,rgba(0,0,0,.04) 1px,transparent 1px);background-size:100% 22px;padding:24px 16px 20px;border:1.5px solid rgba(0,0,0,.15);box-shadow:5px 7px 12px rgba(0,0,0,.18);transform:rotate(-1deg);animation:pop .6s backwards}
+.sticky:nth-child(even){transform:rotate(1deg)}
+.sticky::before{content:'📌';position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:26px;filter:drop-shadow(1px 2px 1px rgba(0,0,0,.3))}
+.sticky h3{font-family:'Special Elite',cursive;font-size:19px;line-height:1.15;margin-bottom:10px;text-align:center}
+.sticky p{font-size:13px;line-height:1.35;text-align:center}
+.s1{top:0;left:4%;animation-delay:.1s}.s2{top:0;right:6%;animation-delay:.2s}.s3{top:285px;left:30%;animation-delay:.3s}.s4{top:305px;right:4%;animation-delay:.4s}
+
+/* JOIN - UPDATED */
+#join{display:flex;min-height:85vh}
+.join-left{flex:0 0 38%;background:#E8E8E8;padding:50px 28px}
+.join-left h2{font-family:'DM Serif Display',serif;font-size:42px}
+.contact{margin-top:24px;font-size:15px;line-height:1.6}
+.contact a{color:#3B1636;font-weight:700;text-decoration:underline;word-break:break-all}
+.join-right{flex:1;background:#FFF8E7;padding:40px 28px}
+.join-right h3{font-family:'Caveat',cursive;font-size:24px;margin-bottom:16px}
+label{font-family:'Patrick Hand',cursive;font-size:16px;margin-bottom:4px;display:block}
+input,textarea,select{width:100%;padding:11px;margin-bottom:14px;border:2px solid #000;font-size:14px}
+.btn{background:#FDE047;border:2px solid #000;padding:12px 24px;box-shadow:3px 3px 0 #000;font-weight:800;cursor:pointer}
 
 @media(max-width:980px){
-#home{flex-direction:column;padding:90px 5% 30px}.h-left h1{font-size:46px}.h-left h1 b{font-size:52px}.h-left p{font-size:21px}.scrap{width:360px;height:500px;transform:scale(.85);transform-origin:top}
+#home{flex-direction:column;padding:90px 5% 30px}.h-left h1{font-size:48px}.h-left h1 b{font-size:54px}.h-left p{font-size:22px}.scrap{width:360px;height:500px;transform:scale(.85);transform-origin:top}
 .about-top{flex-direction:column}.team-grid{grid-template-columns:1fr 1fr}.team-intro{grid-column:span 2;grid-row:auto}
-.impact-wrap{flex-direction:column;gap:20px}.impact-cards{flex-direction:column;align-items:center}.i-card{width:90%;max-width:300px}
-.p-grid{grid-template-columns:1fr}#join{flex-direction:column}
+.impact-wrap{flex-direction:column;gap:30px}.impact-cards{flex-direction:column;align-items:center}.i-card{width:90%;max-width:320px}
+.project-board{height:auto;display:flex;flex-direction:column;gap:28px;align-items:center}.sticky{position:static;width:90%;max-width:300px}
+#join{flex-direction:column}
 }
 </style>
 </head>
 <body>
-<nav><div class="logo">Abroadly<span>Learn. Lead. Rise</span></div><div class="tabs"><a class="tab" href="#home">Home</a><a class="tab" href="#about">About</a><a class="tab" href="#team">Team</a><a class="tab" href="#impact">Impact</a><a class="tab" href="#projects">Projects</a><a class="tab" href="#join">Join</a></div></nav>
+<nav><div class="logo">Abroadly<span>Learn. Lead. Rise</span></div>
+<div class="tabs"><a class="tab" href="#home">Home</a><a class="tab" href="#about">About</a><a class="tab" href="#team">Team</a><a class="tab" href="#impact">Impact</a><a class="tab" href="#projects">Projects</a><a class="tab" href="#join">Join</a></div></nav>
 
 <section id="home">
 <div class="h-left"><h1>Welcome to<b>ABROADLY!</b></h1><p>Stay connected with people all around<br>the world looking for opportunities :)</p></div>
 <div class="h-right"><div class="scrap"><div class="base"></div>
-<div class="person light" style="top:0;left:190px;width:108px;height:112px;animation-delay:.1s"></div>
+<div class="person light" style="top:0;left:195px;width:108px;height:112px;animation-delay:.1s"></div>
 <div class="person mid" style="top:96px;left:95px;animation-delay:.2s"></div>
+<div class="person mid" style="top:96px;left:200px;width:98px;height:100px;animation-delay:.25s"></div>
 <div class="person dark" style="top:160px;left:315px;width:96px;height:116px;animation-delay:.3s"></div>
+<div class="person light" style="top:200px;left:115px;animation-delay:.35s"></div>
 <div class="person mid" style="top:235px;left:205px;width:102px;height:108px;animation-delay:.4s"></div>
 <div class="person light" style="top:355px;left:45px;animation-delay:.5s"></div>
 <div class="person dark" style="top:355px;left:155px;width:100px;height:110px;animation-delay:.55s"></div>
@@ -93,25 +115,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 </section>
 
 <section id="about">
-<div class="about-top"><div class="about-text"><h2>About us</h2><p>Abroadly is a student led network helping young people discover opportunities, build meaningful experience, and connect with a community of ambitious students.</p><div class="about-line"></div></div><div class="about-img">🧑‍🤝‍🧑</div></div>
+<div class="about-top">
+<div class="about-text"><h2>About us</h2><p>Abroadly is a student led network helping young people discover opportunities, build meaningful experience, and connect with a community of ambitious students.</p><div class="about-line"></div></div>
+<div class="about-art">🧑‍🤝‍🧑</div>
+</div>
 <div class="about-bottom"><h2>Why Abroadly?</h2><p>Our Goal is to make opportunities beyond the traditional classroom accessible to every student, in every corner of the world.</p></div>
 </section>
 
 <section id="team">
 <div class="team-grid">
-<div class="team-intro"><h2>Meet our core team:</h2><div class="team-icon">👥</div></div>
-<div class="card cream"><h3>Mannat Sharma</h3><h4>Founder & Director</h4><p>Leading Abroadly's vision, community, partnerships, and students initiatives</p></div>
-<div class="card blue"><h3>Prean</h3><h4>Head of Community</h4><p>Building our student community and helping create meaningful experience for members.</p></div>
-<div class="card cream"><h3>Juweria Jamal</h3><h4>Website Manager & Developer</h4><p>Built this website and manages its daily operations, updates, and maintenance.</p></div>
-<div class="card blue"><h3>Nehal</h3><h4>Content & Research</h4><p>Researching opportunities and creating resources for students</p></div>
-<div class="card cream"><h3>Antara</h3><h4>Head Editor & Abroadly Journalist</h4><p>Leading the editorial team, reviewing submissions and shaping direction of the Abroadly journal</p></div>
-<div class="card blue"><h3>Mokshi</h3><h4>Graphic web designer</h4><p>Designed this easy to use, simple yet clean website.</p></div>
+<div class="team-intro"><h2>Meet our core team:</h2><div style="font-size:68px;margin-top:18px;text-align:center">👥</div></div>
+<div class="card cream" style="animation-delay:.1s"><h3>Mannat Sharma</h3><h4>Founder & Director</h4><p>Leading Abroadly's vision, community, partnerships, and students initiatives</p></div>
+<div class="card blue" style="animation-delay:.2s"><h3>Prean</h3><h4>Head of Community</h4><p>Building our student community and helping create meaningful experience for members.</p></div>
+<div class="card cream" style="animation-delay:.3s"><h3>Juweria Jamal</h3><h4>Website Manager & Developer</h4><p>Built this website and manages its daily operations, updates, and maintenance.</p></div>
+<div class="card blue" style="animation-delay:.4s"><h3>Nehal</h3><h4>Content & Research</h4><p>Researching opportunities and creating resources for students</p></div>
+<div class="card cream" style="animation-delay:.5s"><h3>Antara</h3><h4>Head Editor & Abroadly Journalist</h4><p>Leading the editorial team, reviewing submissions and shaping direction of the Abroadly journal</p></div>
+<div class="card blue" style="animation-delay:.6s"><h3>Mokshi</h3><h4>Graphic web designer</h4><p>Designed this easy to use, simple yet clean website.</p></div>
 </div>
 </section>
 
 <section id="impact">
 <div class="impact-wrap">
-<div class="impact-title"><h2><span>Our</span><span>Impact</span></h2></div>
+<div class="impact-title"><h2>Our<br>Impact</h2></div>
 <div class="impact-cards">
 <div class="i-card"><h3>REACH</h3><p>245K+ Students and young people reached</p></div>
 <div class="i-card"><h3>FOLLOWERS</h3><p>3200+ Community followers!</p><p>20+ Countries reached</p></div>
@@ -119,20 +144,54 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 </div>
 </section>
 
-<section id="projects"><h2>Our Projects and Initiatives</h2>
-<div class="p-grid">
-<div class="p-note"><h4>Abroadly Exclusive 1:1 Mentorship</h4><p>Personalised 30 min sessions for passion projects, research, ECs.</p></div>
-<div class="p-note"><h4>Abroadly Journal</h4><p>Student stories, guides, scholarships, research advice.</p></div>
-<div class="p-note"><h4>Abroadly Project Lab</h4><p>Turn ideas into meaningful projects with guidance.</p></div>
-<div class="p-note"><h4>Abroadly Community</h4><p>Discover opportunities, share ideas, collaborate.</p></div>
+<section id="projects">
+<h2>Our Projects and Initiatives</h2>
+<div class="project-board">
+<div class="sticky s1"><h3>Abroadly Exclusive 1:1 Mentorship</h3><p>Personalised 30 minute sessions where students can get guidance on passion projects, research, extracurriculars, and more</p></div>
+<div class="sticky s2"><h3>Abroadly Journal</h3><p>Students stories, application guides, scholarship resources, research advice, interviews, and practical student resources</p></div>
+<div class="sticky s3"><h3>Abroadly Project Lab</h3><p>A space for students to turn ideas into meaningful projects with guidance, collaborations, and opportunities to showcase their work</p></div>
+<div class="sticky s4"><h3>Abroadly Community</h3><p>A growing network where students discover opportunities, share ideas, collaborate, and learn together</p></div>
 </div>
 </section>
 
-<section id="join"><div class="join-left"><h2>JOIN US</h2><p style="margin-top:10px">Join our community!</p><br><p><b>Contact:</b><br>headcommunitymanager.theabroadly@gmail.com</p></div>
-<div class="join-right"><h3 style="font-family:'Caveat',cursive;font-size:24px;margin-bottom:14px">A little Information about you!</h3>
+<section id="join">
+<div class="join-left">
+<h2>JOIN US</h2>
+<p style="margin-top:12px;font-family:'Patrick Hand',cursive;font-size:18px">Join our community and connect with thousands!</p>
+<div class="contact">
+<p><b>Contact us:</b></p>
+<p>📧 Email: <a href="mailto:headcommunitymanager.theabroadly@gmail.com">headcommunitymanager.theabroadly@gmail.com</a></p>
+<p>📸 Instagram: <a href="https://instagram.com/the_abroadly" target="_blank">@the_abroadly</a></p>
+</div>
+</div>
+<div class="join-right">
+<h3>A little Information about you!</h3>
 <form action="https://formsubmit.co/headcommunitymanager.theabroadly@gmail.com" method="POST">
-<input name="name" placeholder="Your name" style="width:100%;padding:10px;margin-bottom:10px;border:2px solid #000" required>
-<input type="email" name="email" placeholder="Your email" style="width:100%;padding:10px;margin-bottom:10px;border:2px solid #000" required>
-<button class="btn">Join Now!</button></form></div></section>
+<label>Your name</label>
+<input name="name" placeholder="Your name" required>
+
+<label>Your email</label>
+<input type="email" name="email" placeholder="Your email" required>
+
+<label>Your interests (extracurricular activities)</label>
+<textarea name="interests_extracurricular" placeholder="e.g. Debate, Research, Music..." required></textarea>
+
+<label>What you are aiming for</label>
+<textarea name="aiming_for" placeholder="e.g. US college applications, Scholarships..." required></textarea>
+
+<label>Your current level of education</label>
+<select name="current_education" required>
+<option value="" disabled selected>Select</option>
+<option>High School (Grade 9-10)</option>
+<option>High School (Grade 11-12)</option>
+<option>Undergraduate</option>
+<option>Graduate</option>
+<option>Other</option>
+</select>
+
+<button class="btn">Join Now! 🎀</button>
+</form>
+</div>
+</section>
 </body>
 </html>
