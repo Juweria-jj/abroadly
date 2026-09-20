@@ -6,11 +6,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Caveat&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
-body{background:#3D1F3E;color:#F5EAD0}
-.torn{background:#E8DDC5;color:#2B1B1B;padding:8px 18px;font-family:'Cormorant Garamond';font-size:18px;clip-path:polygon(0% 8%,4% 0%,96% 3%,100% 10%,97% 92%,94% 100%,5% 96%,0% 85%)}
-nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;padding:24px 40px;background:#3D1F3E}
+body{background:#3D1F3E;color:#F5EAD0;font-family:'Cormorant Garamond';overflow-x:hidden;width:100%;}
+.torn{background:#E8DDC5;color:#2B1B1B;padding:8px 19px;font-family:"Caveat";clip-path:polygon(0% 8%,4% 0%,96% 3%,100% 10%,97% 92%,94% 100%,6% 98%,0% 85%)}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;padding:24px 40px;background:#3D1F3E;align-items:center}
 .logo{font-family:'Great Vibes';font-size:42px;color:#F7B8D1} .nav{display:flex;gap:12px;flex-wrap:wrap}
-section{min-height:90vh;padding:80px 60px}
+section{min-height:90vh;padding:80px 60px;max-width:100vw;width:100%}
+#home{display:flex;justify-content:space-between;align-items:center;background:#3D1F3E}
+#home h1{font-family:'Cormorant Garamond';font-size:72px;line-height:0.95}
+#home p{font-family:'Caveat';font-size:26px;margin-top:18px}
+
+/*MOBILE FIX*/
+@media(max-width:768px){
+  nav{flex-direction:column;gap:12px;padding:16px;}
+  .nav{justify-content:center;}
+  section{padding:40px 20px !important;min-height:auto !important;}
+  #home{flex-direction:column !important;text-align:center;}
+  #home h1{font-size:38px !important;}
+  #home div{width:100% !important;max-width:100% !important;}
+  #about,#team,#projects,#impacts,#join{flex-direction:column !important;}
+  .jl,.jr{width:100% !important;}
+}
+</style>
 
 /* HOME - ditto same */
 #home{display:flex;justify-content:space-between;align-items:center;background:#3D1F3E}
@@ -64,12 +80,12 @@ section{min-height:90vh;padding:80px 60px}
 
 <section id="home">
   <div><h1>Welcome to<br>ABROADLY!</h1><p>Stay connected with people all around the world looking for opportunities</p></div>
-  <div style="font-size:60px">🎀👥💖⭐<br>9 pink people collage<br>with bows tapes</div>
+  <div style="font-size:48px">🎀💖⭐</div>
 </section>
 
 <section id="about">
   <div><h2>About us</h2><p>Abroadly is a student led network helping young people discover opportunities, build meaningful experience, and connect with a community of ambitious students.</p><br><h2>Why Abroadly?</h2><p>Our Goal is to make oppotunities beyond the traditional classroom accesible to every student, in every corner of the world.</p></div>
-  <div style="display:flex;align-items:center;justify-content:center">[ Your doodles here same as screenshot ]</div>
+<div></div>
 </section>
 
 <section id="team">
