@@ -11,6 +11,7 @@
 html{scroll-behavior:smooth}
 body{background:#fdfaf6;font-family:'Cormorant Garamond',serif;font-size:16px}
 a{text-decoration:none}
+/* TOP NAV BOXES */
 .top-bar{position:fixed;top:0;left:0;right:0;background:var(--wine);display:flex;align-items:center;justify-content:space-between;padding:8px 14px;z-index:200;border-bottom:2.5px solid #000}
 .logo-box{background:#fffaf6;border:1.5px solid #000;padding:4px 8px}
 .logo-box img{width:62px;display:block}
@@ -18,24 +19,30 @@ a{text-decoration:none}
 .nav-box{background:#fff8e6;border:1.5px solid #000;padding:5px 11px;font-family:'Special Elite';font-size:11px;letter-spacing:1px;color:#000;cursor:pointer}
 .nav-box:hover{background:#ffeb9c}
 section{padding:90px 24px;position:relative}
-#home{background:var(--wine);min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:80px}
+.divider{height:1px;background:repeating-linear-gradient(90deg,#000 0 6px,transparent 6px 12px);opacity:0.15;margin:20px 0}
+/* HOME - SPACIOUS JUST PHOTO */
+#home{background:var(--wine);min-height:100vh;display:flex;align-items:center;justify-content:center;padding-top:70px;padding-bottom:70px}
 .home-card{background:#fffaf0;display:grid;grid-template-columns:1fr 1fr;max-width:1050px;width:93%;box-shadow:18px 18px 0 #000;overflow:hidden}
 .home-left{padding:70px 45px;display:flex;flex-direction:column;justify-content:center}
 .home-left h1{font-family:'Special Elite';font-size:58px;line-height:0.92;color:var(--wine)}
 .home-left p{margin-top:20px;font-size:16.5px;line-height:1.7;color:#5a2030}
 .home-right img{width:100%;height:100%;object-fit:cover;display:block}
+/* ARTICLE SECTION */
 #article-section{background:var(--wine);display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap}
 .cherry-link{display:block;transition:0.3s}
 .cherry-link img{width:380px;max-width:85vw;background:#fff;padding:10px;box-shadow:0 15px 30px rgba(0,0,0,0.4)}
 .cherry-link:hover{transform:rotate(-1.5deg) scale(1.03)}
+/* ABOUT */
 #about{background:#8a2c38;text-align:center;color:#ffecec}
 #about h2{font-family:'Special Elite';font-size:42px;letter-spacing:3px;color:#fff8e6}
 .desc{max-width:720px;margin:24px auto 0;font-size:16px;line-height:1.8;color:#ffe9e9}
 .aesthetic-line{border-top:1.5px dashed #a12a3a;position:relative;margin:24px auto;max-width:600px}
 .aesthetic-line:after{content:'✧';position:absolute;top:-10px;left:50%;background:#8a2c38;padding:0 10px;color:#f5d2a0}
+/* PINK NEWSPAPER */
 .pink-wrap{background:#fde8ec;display:grid;grid-template-columns:1.05fr 0.95fr;min-height:80vh;padding:0}
 .pink-text{padding:70px 45px}
 .pink-img img{width:100%;height:100%;object-fit:cover;display:block}
+/* TEAM */
 #team{background:var(--navy);color:#cdd9f5}
 .team-title{font-family:'Dancing Script';font-size:62px;text-align:right;color:#fff8e6;margin-bottom:60px}
 .mem{max-width:820px;margin:0 auto 70px;border:1px dashed rgba(255,255,255,0.18);padding:22px;border-radius:4px;position:relative}
@@ -43,16 +50,19 @@ section{padding:90px 24px;position:relative}
 .mem-tag{display:inline-block;background:#f5efe6;color:var(--navy);padding:8px 32px;font-family:'Dancing Script';font-size:26px}
 .mem-role{font-family:'Special Elite';color:#ffcc6b;font-size:18px;text-align:right;margin:12px 0 16px}
 .mem-bio{font-size:15px;line-height:1.9;text-align:center;color:#c8d7f0}
+/* PROJECTS - NO BLACK BG FIXED */
 #projects{background:#fdfaf6;padding:0}
 .proj-top img{width:100%;display:block;max-height:58vh;object-fit:cover}
 .proj-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:40px;background:#fdfaf6;max-width:900px;margin:auto}
 .card{background:#fffdf0;border:1.8px solid #000;padding:20px;font-size:14.5px;position:relative;box-shadow:4px 4px 0 #000}
 .card:before{content:'';position:absolute;top:-10px;left:50%;width:50px;height:12px;background:#ffeb9c;transform:rotate(-3deg)}
 .card b{font-family:'Special Elite';font-size:16px;display:block;margin-bottom:8px}
+/* IMPACT */
 #impact{background:var(--wine);display:grid;grid-template-columns:0.8fr 1.2fr;gap:20px;align-items:center}
 #impact h2{font-family:'Special Elite';font-size:82px;color:#fff8e6;line-height:0.82}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .stat{background:#f9c5c8;border-radius:18px;padding:28px;text-align:center;font-weight:700;color:#000;font-size:16px}
+/* JOIN */
 #join{background:repeating-linear-gradient(90deg,#7a1e2a 0 22px,#8d2e3a 22px 44px);padding:60px 16px}
 .join-card{max-width:980px;margin:auto;background:#f7c6c7;display:grid;grid-template-columns:0.9fr 1.1fr;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,0.25)}
 .join-left{padding:44px 36px;color:#000}
@@ -64,10 +74,11 @@ section{padding:90px 24px;position:relative}
 .join-right label{font-size:11px;color:#e8c99a;text-transform:uppercase;letter-spacing:1.2px;margin-top:18px;display:block}
 .join-right input{width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.18);padding:12px;border-radius:8px;margin-top:6px;color:#fff;font-size:14px}
 .btn{margin-top:26px;width:100%;background:#ffeb9c;border:none;padding:13px;border-radius:26px;font-weight:800;cursor:pointer}
-@media(max-width:900px){.home-card,.pink-wrap,.join-card,#impact{grid-template-columns:1fr}.home-left{padding:32px 24px}#home{padding-top:95px}.nav-box{font-size:9px;padding:4px 6px}.proj-cards{grid-template-columns:1fr;padding:20px}}
+@media(max-width:900px){.home-card,.pink-wrap,.join-card,#impact{grid-template-columns:1fr}.home-left{padding:32px 24px}#home{padding-top:90px}.nav-box{font-size:9px;padding:4px 6px}.proj-cards{grid-template-columns:1fr;padding:20px}}
 </style>
 </head>
 <body>
+
 <div class="top-bar">
 <div class="logo-box"><img src="logo.jpeg" alt="Abroadly"></div>
 <div class="nav-boxes">
@@ -93,10 +104,10 @@ section{padding:90px 24px;position:relative}
 </section>
 
 <section id="article-section">
-<a href="article.html" class="cherry-link"><img src="cherry.jpeg" alt="Cherry - Click"></a>
+<a href="article.html" class="cherry-link"><img src="cherry.jpeg" alt="Cherry - Click to open article"></a>
 <div>
 <div style="font-family:'Dancing Script';font-size:50px;color:#fff8e6">Write your own article on</div>
-<div style="font-size:12px;color:#ffeb9c;letter-spacing:1px;margin-top:10px;font-family:'Special Elite'">CLICK CHERRY PHOTO → opens article page ✧</div>
+<div style="font-size:12px;color:#ffeb9c;letter-spacing:1px;margin-top:10px;font-family:'Special Elite'">CLICK CHERRY PHOTO → article.html ✧</div>
 </div>
 </section>
 
@@ -119,17 +130,16 @@ section{padding:90px 24px;position:relative}
 
 <section id="team">
 <div class="team-title">Meet the core team</div>
-<div class="mem"><div class="mem-tag">Mannat Sharma</div><div class="mem-role">Meet the Founder and Director</div><div class="mem-bio">Mannat Sharma is a Grade 12 student at Delhi Public School Alwar, Rajasthan. She is interested in social issues, education, public health, and research  and enjoys exploring how different fields can be connected to real-world problems.
-Alongside her academics, she has been involved in student leadership, community initiatives, research projects, and educational activities. She has worked with initiatives focused on supporting students and women in local communities and has participated in research related to education, digital access, and health.</div></div>
-<div class="mem"><div class="mem-tag">Preann Babu</div><div class="mem-role">Head of community</div><div class="mem-bio">Published Parkinson's researcher and Head of Community at Abroadly leading 200+ students while mentoring 15+ to start their research journey. MUN Chair for 65 debates including UNGA, Youth Delegate at India-EU Youth Conference Bengaluru, and recognized with Karnataka State Govt. Award for academic distinction ranking 4th of 85.</div></div>
-<div class="mem"><div class="mem-tag">Juweria Jamal</div><div class="mem-role">Website Manager and Developer</div><div class="mem-bio">93.2% in Xth Boards, Gold Medalist in English Olympiad twice. Website Manager & Developer at Abroadly (3.3K+ community)  built Curio.paper for research guidance and creator of AI-detection and Flowrite tools. Independent researcher on modern education choices and green aviation fuels, qualified for SciAstra IISER Bangalore and awarded Certificate of Excellence at neuomerous Hackathon.</div></div>
-<div class="mem"><div class="mem-tag">Nehal</div><div class="mem-role">Content and Research Head</div><div class="mem-bio">Guided 500+ students individually on scholarships, SOPs and applications. Built 8K+ Instagram audience with 15M+ reach, served as Head of Social Media for student committees and created 55+ designs. Graphic Designer for 4 committees working on websites, branding and campaigns, self-taught video editor developing 2-3 digital products. Certified in Google Digital Marketing, HubSpot Sales & Social Media, Canva Essentials, Business, Event and Hospitality, plus 1st place in an International Art Competition, Volleyball Medalist and volunteer for children’s welfare NGOs.</div></div>
-<div class="mem"><div class="mem-tag">Antara</div><div class="mem-role">Head Editor and Journalist</div><div class="mem-bio">Editor for satva foundation and spark stem which makes baccho ka stem books and has a literary account called khwab quarterly. Also she has conducted lietrary interviews.</div></div>
-<div class="mem"><div class="mem-tag">Mokshi</div><div class="mem-role">Graphic Web Designer</div><div class="mem-bio">Founder & CEO of GLIFT, National-Level Spelling Bee Participant, Head Girl and Class Topper with multiple Academic Excellence Awards and Medals, including first place in English, Science and Social Science and Mathematics Olympiad participation. Recognized as Best Speaker with awards in School MUNs, she is the author of one completed book and a second book in progress. A trained Bharatanatyam and Western dancer with multiple competition awards, basketball player and active sports achiever, she is also a dedicated volunteer for senior citizens and old-age homes with extensive leadership in school activities. Multilingual in English, Tamil, German and Basic Korean.</div></div>
+<div class="mem"><div class="mem-tag">Mannat Sharma</div><div class="mem-role">Meet the Founder and Director</div><div class="mem-bio">Mannat Sharma is a Grade 12 student at Delhi Public School Alwar, Rajasthan. She is interested in social issues, education, public health, and research, and enjoys exploring how different fields can be connected to real-world problems Alongside her academics, she has been involved in student leadership, community initiatives, research projects, and educational activities. She has worked with initiatives focused on supporting students and women in local communities and has participated in research related to education, digital access, and health.</div></div>
+<div class="mem"><div class="mem-tag">Preann Babu</div><div class="mem-role">Head of community</div><div class="mem-bio">Published Parkinson's researcher on stem-cell-derived dopaminergic neurons against α-synuclein with a second paper under review, plus AMR research developing a Schedule H1 verification system. Founder of a student research platform and Head of Community at Abroadly leading 200+ students while mentoring 15+ to start their research journey. MUN Chair for 65 debates including UNGA, Youth Delegate at India-EU Youth Conference Bengaluru, and recognized with Karnataka State Govt. Award for academic distinction ranking 4th of 85.</div></div>
+<div class="mem"><div class="mem-tag">Juveria Jamal</div><div class="mem-role">Website Manager and Developer</div><div class="mem-bio">93.2% in Xth Boards with AIR 120/25,000+ and AIR 300/35,000+ in AMU Entrances, Gold Medalist in English Olympiad twice. Website Manager & Developer at Abroadly (3.3K+ community), built Curio.paper for research guidance and creator of AI-detection and Flowrite tools. Independent researcher on modern education choices and green aviation fuels, qualified for SciAstra IISER Bangalore and awarded Certificate of Excellence at neuomerous Hackathon.</div></div>
+<div class="mem"><div class="mem-tag">Nehal</div><div class="mem-role">Content and Research Head</div><div class="mem-bio">Guided 500+ students individually on scholarships, SOPs and applications, creating 5+ scholarship guides. Built 8K+ Instagram audience with 15M+ reach, served as Head of Social Media for student committees and created 55+ designs. Graphic Designer for 4 committees working on websites, branding and campaigns, self-taught video editor developing 2-3 digital products. Certified in Google Digital Marketing, HubSpot Sales & Social Media, Canva Essentials, Business, Event and Hospitality, plus 1st place in an International Art Competition, Volleyball Medalist and volunteer for children’s welfare NGOs.</div></div>
+<div class="mem"><div class="mem-tag">Antara</div><div class="mem-role">Head Editor and Journalist</div><div class="mem-bio">Editor for satva foundation and editor for spark stem which makes baccho ka stem books and has a literary account calIed khwab quarterly. Also she has conducted literary interviews.</div></div>
+<div class="mem"><div class="mem-tag">Mekshi</div><div class="mem-role">Graphic Web Designer</div><div class="mem-bio">Founder & CEO of GLIFT, National-Level Spelling Bee Participant for 3 consecutive years, Head Girl and Class Topper with multiple Academic Excellence Awards  and Medals, including first place in English, Science and Social Science and Mathematics Olympiad participation. Recognized as Best Speaker with awards in School MUNs, she is the author of one completed book and a second book in progress. A trained Bharatanatyam and Western dancer with multiple competition awards, basketball player and active sports achiever, she is also a dedicated volunteer for senior citizens and old-age homes with extensive leadership in school activities. Multilingual in English, Tamil, German and Basic Korean.</div></div>
 </section>
 
 <section id="projects">
-<div class="proj-top"><img src="anymeans.jpeg" alt="Any Means Possible"></div>
+<div class="proj-top"><img src="anymeans.jpeg" alt="Any Means Possible - Light BG Now"></div>
 <div class="proj-cards">
 <div class="card"><b>1:1 Mentorship</b>Personal 30-min sessions for passion projects, research, and ECs</div>
 <div class="card"><b>Abroadly Journal</b>Guides, scholarship breakdowns, and real student stories.</div>
@@ -139,7 +149,7 @@ Alongside her academics, she has been involved in student leadership, community 
 </section>
 
 <section id="impact">
-<div><h2>IMPACT<br><i style="font-family:'Dancing Script';font-size:38px;color:#ffb8c6">~Growing~</i></h2><p style="margin-top:16px;color:#ffcad4;font-size:13px">WE HAVE 3800+ PEOPLE REACHED OUT TO US</p></div>
+<div><h2>IMPACT<br><i style="font-family:'Dancing Script';font-size:38px;color:#ffb8c6">~Growing~</i></h2><p style="margin-top:16px;color:#ffcad4;font-size:13px;letter-spacing:1px">WE HAVE 3800+ PEOPLE REACHED OUT TO US</p></div>
 <div class="stats">
 <div class="stat">3800+<br>people reached out</div>
 <div class="stat">50+<br>mentorships</div>
@@ -153,19 +163,20 @@ Alongside her academics, she has been involved in student leadership, community 
 <div class="join-left">
 <h2>Join Us</h2>
 <div class="badge">✦ 3800+ PEOPLE REACHED OUT TO US ✦</div>
-<div class="mail-box"><div style="font-size:13px;font-weight:700;margin-bottom:6px">Mail us at :</div><a href="mailto:headcommunitymanager.theabroadly@gmail.com">headcommunitymanager.theabroadly@gmail.com</a></div>
-<div class="insta-box"><div style="font-size:13px;font-weight:700;margin-bottom:6px">Insta Handle :</div><a href="https://instagram.com/the_abroadly" target="_blank">@the_abroadly</a></div>
+<div class="mail-box"><div style="font-size:13px;font-weight:700;margin-bottom:6px">Mail us at : <span style="font-size:11px;font-weight:400;color:#666">(Click to mail)</span></div><a href="mailto:headcommunitymanager.theabroadly@gmail.com">headcommunitymanager.theabroadly@gmail.com</a></div>
+<div class="insta-box"><div style="font-size:13px;font-weight:700;margin-bottom:6px">Insta Handle <span style="font-size:11px;font-weight:400;color:#666">(click to see Instagram)</span></div><a href="https://instagram.com/the_abroadly" target="_blank">@the_abroadly</a></div>
 </div>
 <div class="join-right">
 <form onsubmit="event.preventDefault(); window.location.href='mailto:headcommunitymanager.theabroadly@gmail.com?subject=Join Abroadly';">
 <label>Name</label><input required placeholder="Your full name">
 <label>Gender - Female / Male</label><input placeholder="Female / Male">
-<label>Your interests</label><input placeholder="e.g., scholarships, research">
-<label>Join via - Instagram / Whatsapp / Both</label><input placeholder="Instagram / Whatsapp / Both">
+<label>Your interests - eg, extracurricular and aiming for?</label><input placeholder="e.g., scholarships, research">
+<label>Which application would you like to join us through - Instagram / Whatsapp / Both</label><input placeholder="Instagram / Whatsapp / Both">
 <button class="btn" type="submit">Submit</button>
 </form>
 </div>
 </div>
 </section>
+
 </body>
 </html>
